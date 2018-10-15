@@ -1,0 +1,9 @@
+{{#each stars as |star|}}
+  <span class="rating-star" onClick={{action "setRating" star.rating dong}}>
+    {{#if star.isFull}}
+      {{fa-icon 'star'}}
+    {{else}}
+      {{fa-icon 'star-o'}}
+    {{/if}}
+  </span>
+{{/each}}
