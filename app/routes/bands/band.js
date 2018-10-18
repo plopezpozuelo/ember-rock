@@ -4,5 +4,11 @@ export default Route.extend({
   model(params) {
     let bands = this.modelFor('bands');
     return bands.findBy('slug', params.slug); // params.slug is now 'pearl-jam'
+  },
+
+  actions: {
+    didTransition() {
+      document.title = 'Bands - Rock & Roll';
+    },
   }
 });
